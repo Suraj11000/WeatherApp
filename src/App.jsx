@@ -24,26 +24,15 @@ const App = () => {
         setWeatherData(result);
       });
     console.log(city);
-    // const mockWeatherData = {
-    //   city: " New York",
-    //   temperature: 25,
-    //   conditions: "Partly Cloudy",
-    //   windSpeed: 10,
-    //   Date: "Fri, Dec22",
-    //   Humidity: 99,
-    //   Visibility: 10,
-    // };
-
-    // setWeatherData(mockWeatherData);
   };
 
   return (
-    <div className=" h-[40rem] flex flex-col bg-gradient-to-r from-[#ad36cb] to-[#323333] border-2 rounded-2xl">
-      <h1 className="text-3xl text-white p-5 flex font-bold mb-4 justify-start">
+    <div className="  flex flex-col bg-gradient-to-r from-[#ad36cb] to-[#323333] border-2 rounded-2xl">
+      <h1 className="xl:text-3xl lg:text-3xl md:text-2xl sm:2text-xl text-xl text-white p-5 flex font-bold mb-4 justify-start">
         Weather App
       </h1>
       <div>
-        <div className="mb-4 w-5/12 flex mx-auto">
+        <div className="mb-4 w-9/12 flex mx-auto">
           <input
             type="text"
             className="w-full p-2 px-5 border border-gray-300 rounded-l-lg"
@@ -61,18 +50,18 @@ const App = () => {
         <div>
           {weatherData && (
             <div className="mt-8 justify-center flex px-20">
-              <p className="text-white uppercase font-bold text-2xl">
+              <p className="text-white uppercase font-bold xl:text-2xl lg:text-2xl md:text-2xl sm:text-2xl text-lg">
                 City : {weatherData.name}
               </p>
             </div>
           )}
         </div>
-        <div className="flex justify-center items-center gap-10">
+        <div className="flex flex-wrap-reverse justify-center items-center xl:gap-10 lg:gap-10 md:gap-10 sm:gap-10">
           <div className="flex gap-4 justify-center items-center">
             <FaTemperatureFull size={40} className=" invert mt-5" />
             {weatherData && (
               <div className="mt-8">
-                <p className="text-4xl text-white font-bold mb-4">
+                <p className="xl:text-4xl lg:text-3xl md:text-2xl sm:text-2xl text-xl text-white font-bold mb-4">
                   {weatherData.main.temp}°C
                 </p>
               </div>
@@ -81,17 +70,17 @@ const App = () => {
           <CiCloudOn size={200} className=" invert" />
         </div>
         {weatherData && (
-          <div className="pt-14">
-            <ul className="flex justify-center items-center gap-40">
+          <div className="pt-14 xl:pb-16 lg:pb-16 md:pb-16 sm:pb-16 pb-8">
+            <ul className="flex flex-wrap justify-center items-center xl:gap-40 lg:gap-32 md:gap-28 sm:gap-24 gap-16">
               <li>
                 <div className=" gap-5 flex flex-col justify-center items-center">
                   <div className=" flex flex-col justify-center items-center">
                     <WiHumidity size={50} className=" invert"/>
-                    <label className=" text-white font-semibold text-2xl uppercase">
+                    <label className=" text-white font-semibold xl:text-2xl lg:text-2xl md:text-2xl sm:text-2xl uppercase">
                       Humidity
                     </label>
                   </div>
-                  <p className=" text-white font-bold text-3xl">
+                  <p className=" text-white font-bold xl:text-3xl lg:text-3xl md:text-2xl sm:2text-xl">
                     {weatherData.main.humidity}%
                   </p>
                 </div>
@@ -100,11 +89,11 @@ const App = () => {
                 <div className=" gap-5 flex flex-col">
                 <div className=" flex flex-col justify-center items-center">
                   <MdOutlineVisibility size={50} className=" invert"/>
-                  <label className=" text-white font-semibold text-2xl uppercase">
+                  <label className=" text-white font-semibold xl:text-2xl lg:text-2xl md:text-2xl sm:text-2xl uppercase">
                     Visibility
                   </label>
                   </div>
-                  <p className=" text-white font-bold text-3xl">
+                  <p className=" text-white font-bold xl:text-3xl lg:text-3xl md:text-2xl sm:2text-xl">
                     {weatherData.visibility}m
                   </p>
                 </div>
@@ -113,11 +102,11 @@ const App = () => {
                 <div className=" gap-5 flex flex-col">
                 <div className=" flex flex-col justify-center items-center">
                   <CiCloudSun size={50} className=" invert"/>
-                  <label className=" text-white font-semibold text-2xl uppercase">
+                  <label className=" text-white font-semibold xl:text-2xl lg:text-2xl md:text-2xl sm:text-2xl uppercase">
                     Condition
                   </label>
                   </div>
-                  <p className=" text-white font-bold text-2xl uppercase">
+                  <p className=" text-white font-bold xl:text-3xl lg:text-3xl md:text-2xl sm:2text-xl uppercase">
                     {weatherData.weather[0].main}
                   </p>
                 </div>
@@ -126,11 +115,11 @@ const App = () => {
                 <div className=" gap-5 flex flex-col">
                 <div className=" flex flex-col justify-center items-center">
                   <RiCloudWindyLine size={50} className=" invert"/>
-                  <label className=" text-white font-semibold text-2xl uppercase">
+                  <label className=" text-white font-semibold xl:text-2xl lg:text-2xl md:text-2xl sm:text-2xl uppercase">
                     Wind Speed
                   </label>
                   </div>
-                  <p className=" text-white font-bold text-3xl">
+                  <p className=" text-white font-bold xl:text-3xl lg:text-3xl md:text-2xl sm:2text-xl">
                     {weatherData.wind.speed}km/h
                   </p>
                 </div>
