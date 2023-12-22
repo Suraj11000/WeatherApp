@@ -1,8 +1,8 @@
-# React + Vite
+# WeatherApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Created a basic intractive ui using reactjs and tailwindcss.
+Screenshots:
+  - Home page:
+![ui1](https://github.com/Suraj11000/WeatherApp/assets/127151331/60ccebf1-0d15-4901-8783-d9e8359a1510)
+  - Page after City search:
+![ui2](https://github.com/Suraj11000/WeatherApp/assets/127151331/99a82812-f2d1-4fd0-a4fe-440d76d72137)
